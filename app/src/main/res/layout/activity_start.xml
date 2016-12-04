@@ -1,0 +1,130 @@
+<!-- Create one encapsulating vertical Linear Layout-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".StartActivity"
+    android:orientation="vertical">
+
+    <!-- First Text View asks about the number of Referees-->
+    <TextView
+        android:id="@+id/View1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/tv_nrOfRefs"
+        android:textSize="25sp"
+        android:layout_gravity="center" />
+
+    <!-- Next Line allows the user to increase or decrease the number of Referees-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- The Decrease Button (with a Minus-Symbol)-->
+        <Button
+            android:id="@+id/bt_Referee_minus"
+            android:tag="bt_Referee_minus"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_minus"
+            android:textSize="40sp"
+            android:onClick="handleClickedButton"/>
+
+        <!-- This TextView shows the current chosen number of Referees-->
+        <TextView
+            android:id="@+id/textView_NrRefs"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:gravity="center" />
+
+        <!-- The Increase Button (with a Plus-Symbol)-->
+        <Button
+            android:id="@+id/bt_Referee_plus"
+            android:tag="bt_Referee_plus"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_plus"
+            android:textSize="40sp"
+            android:onClick="handleClickedButton"/>
+
+    </LinearLayout>
+
+    <!-- This TextView asks the user about  the type of game and/or the amount of money available-->
+    <TextView
+        android:id="@+id/View2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_amountOfMoney"
+        android:gravity="center_horizontal"
+        android:textSize="25sp"
+        android:layout_gravity="center" />
+
+    <!-- This spinner allows the user to choose some preset type of games/money-combinations-->
+    <Spinner
+        android:id="@+id/spinner_typeOfGames"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+
+    <!-- Next Line allows the user to increase or decrease the amount of available money-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- The Decrease Button (with a Minus-Symbol)-->
+        <Button
+            android:id="@+id/bt_Money_minus"
+            android:tag="bt_Money_minus"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_minus"
+            android:textSize="40sp"
+            android:onClick="handleClickedButton"/>
+
+        <!-- This TextView shows the current chosen available money-->
+        <TextView
+            android:id="@+id/textView_Money"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:gravity="center" />
+
+        <!-- The Increase Button (with a Plus-Symbol)-->
+        <Button
+            android:id="@+id/bt_Money_plus"
+            android:tag="bt_Money_plus"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_plus"
+            android:textSize="40sp"
+            android:onClick="handleClickedButton"/>
+
+    </LinearLayout>
+
+    <!-- The Continue Button-->
+    <Button
+        android:id="@+id/button_Continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="@string/bt_continue"
+        android:onClick="startDistanceActivity"
+        />
+
+</LinearLayout>

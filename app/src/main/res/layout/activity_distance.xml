@@ -1,0 +1,378 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="de.praschma_online.richard.refcalculator.DistanceActivity"
+    android:orientation="vertical">
+
+    <!--Title Linear Layout-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/distanceActivity_tv_Ref_Title"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:text="@string/distanceActivity_tv_Distance_Title"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <!-- Referee Linear Layout-->
+    <LinearLayout
+        android:id="@+id/layout_Referee_0"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_Referee"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/bt_Referee_minus"
+            android:tag="bt_Referee_0_minus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_minus"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:padding="0dp"
+            android:onClick="handleClickedButton"/>
+
+        <TextView
+            android:id="@+id/tv_Referee_0"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/bt_Referee_plus"
+            android:tag="bt_Referee_0_plus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_plus"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:padding="0dp"
+            android:onClick="handleClickedButton"/>
+    </LinearLayout>
+
+    <!-- Umpire Linear Layout-->
+    <LinearLayout
+        android:id="@+id/layout_Referee_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_Umpire"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/bt_Umpire_minus"
+            android:tag="bt_Referee_1_minus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_minus"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:padding="0dp"
+            android:onClick="handleClickedButton"/>
+
+        <TextView
+            android:id="@+id/tv_Referee_1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/bt_Umpire_plus"
+            android:tag="bt_Referee_1_plus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_plus"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:padding="0dp"
+            android:onClick="handleClickedButton"/>
+    </LinearLayout>
+
+    <!-- Linesman Linear Layout-->
+    <LinearLayout
+        android:id="@+id/layout_Referee_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_Linesman"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/bt_Linesman_minus"
+            android:tag="bt_Referee_2_minus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_minus"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:padding="0dp"
+            android:onClick="handleClickedButton"/>
+
+        <TextView
+            android:id="@+id/tv_Referee_2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/bt_Linesman_plus"
+            android:tag="bt_Referee_2_plus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_plus"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:padding="0dp"
+            android:onClick="handleClickedButton"/>
+    </LinearLayout>
+
+    <!-- Linejudge Linear Layout-->
+    <LinearLayout
+        android:id="@+id/layout_Referee_3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_Linejudge"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/bt_Linejudge_minus"
+            android:tag="bt_Referee_3_minus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_minus"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:padding="0dp"
+            android:onClick="handleClickedButton"/>
+
+        <TextView
+            android:id="@+id/tv_Referee_3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/bt_Linejudge_plus"
+            android:tag="bt_Referee_3_plus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_plus"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:padding="0dp"
+            android:onClick="handleClickedButton"/>
+    </LinearLayout>
+
+    <!-- Sidejudge Linear Layout-->
+    <LinearLayout
+        android:id="@+id/layout_Referee_4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_Sidejudge"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/bt_Sidejudge_minus"
+            android:tag="bt_Referee_4_minus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_minus"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:padding="0dp"
+            android:onClick="handleClickedButton" />
+
+        <TextView
+            android:id="@+id/tv_Referee_4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/bt_Sidejudge_plus"
+            android:tag="bt_Referee_4_plus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_plus"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:padding="0dp"
+            android:onClick="handleClickedButton" />
+    </LinearLayout>
+
+    <!-- Fieldjudge Linear Layout-->
+    <LinearLayout
+        android:id="@+id/layout_Referee_5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_Fieldjudge"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/bt_Fieldjudge_minus"
+            android:tag="bt_Referee_5_minus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_minus"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:padding="0dp"
+            android:onClick="handleClickedButton" />
+
+        <TextView
+            android:id="@+id/tv_Referee_5"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/bt_Fieldjudge_plus"
+            android:tag="bt_Referee_5_plus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_plus"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:padding="0dp"
+            android:onClick="handleClickedButton" />
+    </LinearLayout>
+
+    <!-- Backjudge Linear Layout-->
+    <LinearLayout
+        android:id="@+id/layout_Referee_6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_Backjudge"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/bt_Backjudge_minus"
+            android:tag="bt_Referee_6_minus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_minus"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:padding="0dp"
+            android:onClick="handleClickedButton" />
+
+        <TextView
+            android:id="@+id/tv_Referee_6"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center_horizontal"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/bt_Backjudge_plus"
+            android:tag="bt_Referee_6_plus"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/bt_plus"
+            android:gravity="center_horizontal"
+            android:textSize="35sp"
+            android:padding="0dp"
+            android:onClick="handleClickedButton" />
+    </LinearLayout>
+
+    <!-- The Continue Button-->
+    <Button
+        android:id="@+id/button_Continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="@string/bt_continue"
+        android:onClick="startCalculatorActivity" />
+</LinearLayout>

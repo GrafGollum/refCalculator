@@ -1,3 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RefCalculator</string>
+    <!-- The App-Name-->
+    <string name="app_name">Ref Calculator</string>
+
+    <!-- Strings for the Start Activity-->
+    <string name="tv_nrOfRefs">Number of Referees</string>
+    <string name="tv_amountOfMoney">Amount of Money\nType of Game</string>
+    <string name="dialog_message_OneReferee">Do you really need an app to split the money
+        for ONE or NO Referee?</string>
+    <string name="no">No</string>
+    <string name="dialog_message_notFinished">You have not yet assigned all the money.
+        The rest must be 0!</string>
+
+    <!-- List of type of games-->
+    <!-- DO NOT CHANGE-->
+    <string-array name="sp_typeOfGames">
+        <item>--please choose--</item>
+        <item>GFL I</item>
+        <item>GFL II</item>
+        <item>DBL I</item>
+        <item>DBL II</item>
+        <item>Other Seniors</item>
+        <item>Women 4-Team Tourn.</item>
+        <item>Women 3-Team Tourn.</item>
+        <item>GFLJ</item>
+        <item>U19 LL</item>
+        <item>U19 non LL</item>
+        <item>U17 RL</item>
+        <item>U17 OL</item>
+        <item>U15 RL</item>
+        <item>U15 OL</item>
+        <item>U15 4-Team Tourn.</item>
+        <item>U15 3-Team Tourn.</item>
+        <item>U13 RL</item>
+        <item>U13 4-Team Tourn.</item>
+        <item>U13 3-Team Tourn.</item>
+        <item>U11 4-Team Tourn.</item>
+        <item>U11 3-Team Tourn.</item>
+    </string-array>
+
+    <!-- Strings for the Calculator Activity-->
+    <string name="title_activity_calculator">Calculator</string>
+    <string name="calculatorActivity_tv_Ref_Title">Ref</string>
+    <string name="calculatorActivity_tv_Gas_Title">Gas Money</string>
+    <string name="calculatorActivity_tv_Equal_Title">Money</string>
+    <string name="calculatorActivity_tv_Total_Money">Total</string>
+    <string name="calculatorActivity_tv_Rest_Money">Rest</string>
+
+    <!-- Strings for the Distance Activity-->
+    <string name="title_activity_distance">Distance</string>
+    <string name="distanceActivity_tv_Ref_Title">Ref</string>
+    <string name="distanceActivity_tv_Distance_Title">Driven Distance</string>
+
+    <!-- Strings for the Final Activity -->
+    <string name="finalActivity_tv_Ref_Title">Referee</string>
+    <string name="finalActivity_tv_Money_Title">Money</string>
+    <string name="title_activity_final">Result</string>
+
+    <!-- Strings for Settings Activity-->
+    <string name="title_activity_settings">Settings</string>
+    <string name="preferences_tax">Community Tax</string>
+    <string name="preferences_tax_summary_true">The Referee automatically gets 5 Euros from the Gas Money</string>
+    <string name="preferences_tax_summary_false">The Referee does not automatically get 5 Euros from the Gas Money</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Strings for all Activities (international)-->
+    <string name="bt_minus" translatable="false">-</string>
+    <string name="bt_plus" translatable="false">+</string>
+    <string name="tv_Referee" translatable="false">R</string>
+    <string name="tv_Umpire" translatable="false">U</string>
+    <string name="tv_Linesman" translatable="false">LM</string>
+    <string name="tv_Linejudge" translatable="false">LJ</string>
+    <string name="tv_Fieldjudge" translatable="false">FJ</string>
+    <string name="tv_Sidejudge" translatable="false">SJ</string>
+    <string name="tv_Backjudge" translatable="false">BJ</string>
+
+    <!-- Strings for all Activities (national)-->
+    <string name="bt_continue">Continue</string>
+    <string name="bt_done">Done</string>
+
+
+
+
+
 </resources>
